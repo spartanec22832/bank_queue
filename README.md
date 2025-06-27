@@ -15,9 +15,12 @@
 ```
 
 Структура проекта:
-- bank_queue_android - папка андроид-приложения (kotlin + Jetpack Compose)
-- bank_queue_backend - папка REST-сервиса для обработки запросов \
+- `bank_queue_android` - папка андроид-приложения (kotlin + Jetpack Compose)
+- `bank_queue_backend` - папка REST-сервиса для обработки запросов \
 между android/сайтом и БД (расположена в Докере)
-- bank_queue_web - папка сайта (JS/CSS/HTML + React(Vite))
-- bank_queue_infrastructure - папка Докер-инфраструктуры проекта  
+- `bank_queue_web` - папка сайта (JS/CSS/HTML + React(Vite))
+- `bank_queue_infrastructure` - папка Докер-инфраструктуры проекта  
   (docker-compose + README для запуска контейнеров)
+
+P.S.: Также отдельно есть 4 приватных репозитория для каждой из частей \
+(backend, web, android, infrastructure, где можно посмотреть список коммитов)
