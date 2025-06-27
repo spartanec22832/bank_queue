@@ -1,0 +1,402 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.navbar {
+  position: relative;
+  height: 64px;
+  background-color: #0047ab;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  color: white;
+}
+
+.logo {
+  position: absolute;
+  left: 2rem;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  color: #0047ab;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border-radius: 6px;
+}
+
+.nav-menu {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1.5rem;
+}
+
+.burger-menu {
+  position: absolute;
+  right: 2rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+
+
+/* Сайдбар */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 360px;
+  height: 100%;
+  background-color: #ffffff;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.2);
+  padding: 0;
+  z-index: 1000;
+}
+
+.sidebar-topbar {
+  height: 64px;
+  background-color: #0047ab;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.sidebar .close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 3rem;
+}
+
+.sidebar ul li {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+
+.nav-btn {
+  background-color: white;
+  color: #0047ab;
+  border: none;
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.nav-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.auth-buttons {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.auth-btn {
+  width: 80%;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  background-color: #0047ab;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+input {
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #0047BA; /* Синий цвет из кнопки */
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 14px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+input::placeholder {
+  color: #666;
+}
+
+input:focus {
+  border-color: #003080;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 71, 186, 0.2);
+}
+
+.auth-btn {
+  background-color: #0047BA;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto 0 auto; /* Центрируем */
+  width: 80%;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+
+
+
+.auth-btn:hover {
+  background-color: #00307d;
+}
+
+
+.main-content {
+  padding: 3rem 2rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+/*
+.hero-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+  text-align: center;
+  background: #f9f9f9;
+}
+*/
+.hero-section {
+  background: #fff;                /* белый фон вместо текущего */
+  border-radius: 12px;             /* скругляем углы */
+  padding: 3rem 2rem;              /* внутренние отступы */
+  max-width: 800px;                /* чтобы не было на всю ширину */
+  margin: 0 auto;                  /* центрируем горизонтально */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.hero-title {
+  font-size: 3rem;
+  color: #0047AB;
+  margin-bottom: 1rem;
+  font-weight: 800;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: #333;
+  margin-bottom: 2.5rem;
+  max-width: 640px;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cta-btn {
+  background-color: #0047AB;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.25s, transform 0.2s;
+}
+
+.cta-btn:hover {
+  background-color: #00307d;
+  transform: translateY(-2px);
+}
+
+.cta-btn.secondary {
+  background-color: white;
+  color: #0047AB;
+  border: 2px solid #0047AB;
+}
+
+.cta-btn.secondary:hover {
+  background-color: #e6f0ff;
+}
+
+
+/* 🔵 Анимированный градиентный фон */
+.animated-background {
+  background: linear-gradient(-45deg, #0047ab, #006eff, #00307d, #0047ab);
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
+}
+
+/* 🔄 Анимация движения градиента */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+.ticket-form {
+  margin: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.ticket-form input,
+.ticket-form label input {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.ticket-form .cta-btn {
+  align-self: flex-start;
+}
+
+/* Стили для формы создания тикета */
+.ticket-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 2px solid #0047AB;
+}
+
+.ticket-form h2 {
+  margin: 0 0 1rem;
+  font-size: 1.5rem;
+  color: #0047AB;
+}
+
+.ticket-form input,
+.ticket-form label input {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #0047AB;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.ticket-form label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.ticket-form .cta-btn {
+  align-self: flex-start;
+  background-color: #0047AB;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.ticket-form .cta-btn:hover {
+  background-color: #00307d;
+}
+
+.ticket-form .error-text {
+  margin: -0.5rem 0 0;
+  color: #d32f2f;
+  font-size: 0.9rem;
+}
+
+/* 1. Вернуть нативный вид для date-поля */
+input[type="date"] {
+  appearance: auto;
+  -webkit-appearance: auto;
+  -moz-appearance: auto;
+  background-color: #fff;       /* белый фон, чтобы иконка была видна */
+  background-image: none;       /* убираем фоновые картинки, если они затыкают иконку */
+  position: relative;
+  padding-right: 2.5rem;        /* место под иконку */
+}
+
+/* 2. Показать индикатор календаря */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: block;               /* включаем иконку */
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #0047AB;               /* цвет иконки */
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+/* 3. Отключить собственные стрелки и спиннеры */
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-clear-button {
+  display: none;
+}
+
+/* Приводим <select> в форму инпута */
+.ticket-form select {
+  /* та же самая «обёртка», что у input */
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #0047AB;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #fff;
+  color: #333;
+  appearance: none;           /* убираем стрелки по умолчанию */
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg width='10' height='5' viewBox='0 0 10 5' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0l5 5 5-5z' fill='%230047AB'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 10px 5px;
+}
+
+/* Уберём встроенный спиннер/кнопку очистки, если есть */
+.ticket-form select::-ms-expand {
+  display: none;
+}
+
+.success-text {
+  margin-top: 0.5rem;
+  color: #2e7d32;
+  font-size: 0.95rem;
+}

@@ -1,0 +1,102 @@
+.page-container {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.card.edit-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 720px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.card-title {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: #0a1f44;
+}
+
+.edit-card .error-text {
+    color: #d9534f;
+    margin-bottom: 1rem;
+}
+
+.edit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    color: #0a1f44;
+}
+
+/* -------- Общие стили для всех полей (инпуты и селекты) -------- */
+
+.form-input,
+.form-select {
+    /* Одинаковые паддинги и рамка */
+    padding: 0.75rem 1rem;
+    border: 2px solid #0047AB;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #0a1f44;
+    background-color: #FFFFFF;      /* белый фон */
+    appearance: none;               /* убираем дефолтный стиль селекта */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 100%;                    /* чтобы селект растягивался во всю ширину лейбла */
+    box-sizing: border-box;
+}
+
+/* Для времени чуть уже, если нужно */
+.time-select {
+    width: auto; /* или width: 150px; подберите под ваш дизайн */
+}
+
+/* Добавляем стрелочку селекта **справа** внутри поля */
+.form-select {
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D'10'%20height%3D'6'%20viewBox%3D'0%200%2010%206'%20xmlns%3D'http%3A//www.w3.org/2000/svg'%3E%3Cpath%20d%3D'M0%200l5%206%205-6z'%20fill%3D'%230047AB'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 10px 6px;
+    padding-right: 2.5rem; /* чтобы стрелочка не лезла на текст */
+}
+
+/* Убрать дефолтный фон option при открытии */
+.form-select option {
+    background-color: #fff;
+    color: #0a1f44;
+}
+
+.btn-group {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.btn {
+    flex: 1;
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.save-btn {
+    background: #0047AB;
+    color: #fff;
+}
+
+.delete-btn {
+    background: #E27D6E;
+    color: #fff;
+}

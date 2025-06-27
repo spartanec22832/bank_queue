@@ -1,0 +1,58 @@
+
+services:
+  # -----------------------------
+  # 1) Сервис базы данных (Postgres)
+  # -----------------------------
+  db:
+    image: postgres:15
+    container_name: bankqueue_db
+    restart: always
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+    volumes:
+      - bankqueue_data:/var/lib/postgresql/data
+    ports:
+      - '${DB_PORT}:5432'
+
+  # -----------------------------
+  # 2) Сервис backend
+  # -----------------------------
+  backend:
+    build:
+      context: ../bank_queue_backend    # путь к локальному репо backend
+      dockerfile: Dockerfile
+    container_name: bankqueue_backend
+    restart: always
+    depends_on:
+      - db
+    environment:
+      # Здесь Spring Boot-приложение «видит», куда ему подключаться
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/${POSTGRES_DB}
+      SPRING_DATASOURCE_USERNAME: ${POSTGRES_USER}
+      SPRING_DATASOURCE_PASSWORD: ${POSTGRES_PASSWORD}
+      SECURITY_PASSWORD: ${SECURITY_PASSWORD}
+      SECURITY_USERNAME: ${SECURITY_USERNAME}
+      SPRING_PROFILES_ACTIVE: ${SPRING_PROFILES_ACTIVE}
+    env_file:
+      - .env
+    ports:
+      - '8080:8080'
+
+  # -----------------------------
+  # 3) Сервис frontend
+  # -----------------------------
+  frontend:
+    build:
+      context: ../bank_queue_web
+      dockerfile: Dockerfile
+      args:
+        VITE_API_URL: http://backend:8080
+    ports:
+      - '3000:80'
+    depends_on:
+      - backend
+
+volumes:
+  bankqueue_data:

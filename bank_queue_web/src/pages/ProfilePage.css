@@ -1,0 +1,68 @@
+/* src/pages/ProfilePage.css */
+.page-container {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 2rem;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    color: #0a1f44;
+}
+
+.card-title {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.profile-info p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+}
+
+.profile-info strong {
+    display: inline-block;
+    width: 100px;
+}
+
+.profile-actions {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.profile-actions .cta-btn {
+    background-color: #0047AB;
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.profile-actions .delete-btn {
+    background-color: #D77664;
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* src/pages/ProfilePage.css */
+.error-text {
+    color: red;    /* ярко-красный */
+    font-size: 1.25rem;   /* при необходимости скорректируйте размер */
+    margin: 1rem 0;
+}

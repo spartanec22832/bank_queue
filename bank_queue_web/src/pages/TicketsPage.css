@@ -1,0 +1,90 @@
+/* src/pages/TicketsPage.css */
+
+/* Внешний контейнер */
+.page-container {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+/* Белая карточка вокруг заголовка + списка */
+.page-container {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.tickets-card {
+    /* 90% от ширины экрана, но не больше 1200px,
+       и учитываем padding контейнера нет необходимости */
+    width: 90vw;
+    max-width: 400px;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    color: #0a1f44;
+}
+
+
+/* Заголовок */
+.tickets-card h1 {
+    margin: 0 0 1.5rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* Если есть ошибка */
+.error-text {
+    color: salmon;
+    margin-bottom: 1rem;
+}
+
+/* Список карточек */
+.tickets-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Одна карточка */
+.ticket-card {
+    background-color: #0a1f44;
+    border-radius: 8px;
+    padding: 1rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.ticket-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+/* Номер талона */
+.ticket-number {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #ffffff;
+}
+
+/* Информация внутри карточки */
+.ticket-info {
+    line-height: 1.5;
+    font-size: 0.95rem;
+    color: #f0f0f0;
+}
+
+.ticket-info strong {
+    display: inline-block;
+    width: 70px;
+}
+
+/* src/pages/ProfilePage.css */
+.tickets-message {
+    color: red;    /* ярко-красный */
+    font-size: 1.25rem;   /* при необходимости скорректируйте размер */
+    margin: 1rem 0;
+}
+

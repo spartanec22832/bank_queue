@@ -1,0 +1,46 @@
+/* src/pages/HomePage.css */
+.page-container {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 1rem;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 2rem;
+    max-width: 720px;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+    font-size: 2.5rem;
+    color: #0047AB;
+    margin-bottom: 0.5rem;
+}
+
+.card-subtitle {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.tickets-list {
+    margin-top: 2rem;
+}
+
+.ticket-item {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 1rem;
+    color: #222;
+}
+
+.ticket-item:last-child {
+    border-bottom: none;
+}
+
+.no-wrap {
+    white-space: nowrap;
+}

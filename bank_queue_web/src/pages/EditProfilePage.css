@@ -1,0 +1,68 @@
+/* в обоих файлах: */
+.page-container {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.tickets-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 2rem;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    color: #0a1f44;
+}
+
+.tickets-card h1 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.ticket-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.ticket-form label {
+    font-weight: bold;
+}
+
+.form-input {
+    padding: 0.75rem;
+    border: 2px solid #0047AB;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.cta-btn {
+    flex: 1;
+    background-color: #0047AB;
+    color: #fff;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cancel-btn {
+    flex: 1;
+    background-color: #A8C8FF;
+    color: #0a1f44;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
