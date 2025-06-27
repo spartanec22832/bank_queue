@@ -22,5 +22,14 @@
 - `bank_queue_infrastructure` - папка Докер-инфраструктуры проекта  
   (docker-compose + README для запуска контейнеров)
 
-P.S.: Также отдельно есть 4 приватных репозитория для каждой из частей \
+P.S.: Также отдельно есть 4 публичных репозитория для каждой из частей \
 (backend, web, android, infrastructure, где можно посмотреть список коммитов)
+
+`bank_queue_android`: https://github.com/inaidE/bank_queue_android.git
+
+`bank_queue_backend`: https://github.com/inaidE/bank_queue_backend.git
+
+`bank_queue_web`: https://github.com/inaidE/bank_queue_web.git
+
+`bank_queue_infrastructure`:
+https://github.com/inaidE/bank_queue_infrastructure.git

@@ -9,7 +9,7 @@
 
 1. На машине должен быть установлен Docker (Engine + Docker Compose).
 2. Версия JDK 17
-3. Клонированы все 4 репозитория гит (данные репозитории приватны):
+3. Клонированы все 4 репозитория гит (публичные репозитории для участников команды):
    ```bash
    git clone https://github.com/inaidE/bank_queue_backend.git
    git clone https://github.com/inaidE/bank_queue_web.git
